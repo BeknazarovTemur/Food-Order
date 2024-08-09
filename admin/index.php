@@ -1,6 +1,6 @@
 
 <?php
-include 'partials/menu.php';
+include 'partials/header.php';
 ?>
 <!-- Main Content Section Starts -->
  <div class="main-content">
