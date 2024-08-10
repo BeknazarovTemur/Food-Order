@@ -1,5 +1,6 @@
 <?php
 include '../config/database.php';
+include 'login-check.php';
 ?>
 
 <!doctype html>
@@ -22,6 +23,7 @@ include '../config/database.php';
             <li><a href="manage-category.php">Category</a></li>
             <li><a href="manage-food.php">Food</a></li>
             <li><a href="manage-order.php">Order</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
 </div>
