@@ -8,11 +8,11 @@ if (isset($_POST['submit'])) {
     $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
     if ($res == true) {
-        $_SESSION['add'] = "<div class='success'>Admin Added Successfully!</div>";
-        header('location:'.SITEURL.'admin/manage-admin.php');
+        $_SESSION['add'] = "<div class='success'> Admin successfully added! </div>";
+        header('location:' .SITEURL. 'admin/manage-admin.php');
     } else {
-        $_SESSION['add'] = "<div class='error'>Failed to Add Admin</div>";
-        header('location:'.SITEURL.'admin/manage-admin.php');
+        $_SESSION['add'] = "<div class='error'> Admin did not added! </div>";
+        header('location:' .SITEURL. 'admin/manage-admin.php');
     }
 }
 
@@ -20,9 +20,7 @@ if (isset($_POST['submit'])) {
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Add Admin</h1>
-
-        <br><br>
+        <h1>Add Admin</h1> <br><br>
 
         <?php
             if (isset($_SESSION['add'])) {

@@ -71,7 +71,7 @@ include "partials/header.php";
                             ?>
 
                             <tr>
-                                <td><?= $sn++ ?> </td>
+                                <td><?= $sn++ ?>. </td>
                                 <td><?= $full_name ?></td>
                                 <td><?= $username ?></td>
                                 <td>
