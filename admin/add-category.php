@@ -24,21 +24,24 @@ if (isset($_POST['submit'])) {
     if (isset($_FILES['image']['name'])) {
         //To upload image we need image name, source path and destination path
         $image_name = $_FILES['image']['name'];
-        //Auto Renaming our Image
-        //Get the Extension of our image (jpg, png, gif, etc)
-        $ext = explode('.', $image_name);
-        $image_ext = end($ext);
-        $image_name = "Food_Category_".rand(000, 999).'.'.$ext;
+        //Upload Image only if image is selected
+        if ($image_name != "") {
+            //Auto Renaming our Image
+            //Get the Extension of our image (jpg, png, gif, etc)
+            $ext = explode('.', $image_name);
+            $image_ext = end($ext);
+            $image_name = "Food_Category_" . rand(000, 999) . '.' . $ext;
 
-        $source_path = $_FILES['image']['tmp_name'];
-        $destination_path = "../images/category/" . $image_name;
-        //Upload the image
-        $upload = move_uploaded_file($source_path, $destination_path);
+            $source_path = $_FILES['image']['tmp_name'];
+            $destination_path = "../images/category/" . $image_name;
+            //Upload the image
+            $upload = move_uploaded_file($source_path, $destination_path);
 
-        if ($upload==false) {
-            $_SESSION['upload'] = "<div class='error'>Failed to Upload Image. </div>";
-            header('location:' .SITEURL.'admin/add-category.php');
-            die();
+            if ($upload == false) {
+                $_SESSION['upload'] = "<div class='error'>Failed to Upload Image. </div>";
+                header('location:' . SITEURL . 'admin/add-category.php');
+                die();
+            }
         }
     } else {
         $image_name = "";

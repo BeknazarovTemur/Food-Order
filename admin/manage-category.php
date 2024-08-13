@@ -13,6 +13,36 @@ include "partials/header.php";
             echo $_SESSION['add'];
             unset($_SESSION['add']);
         }
+
+        if (isset($_SESSION['remove'])) {
+            echo $_SESSION['remove'];
+            unset($_SESSION['remove']);
+        }
+
+        if (isset($_SESSION['delete'])) {
+            echo $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+
+        if (isset($_SESSION['no-category-found'])) {
+            echo $_SESSION['no-category-found'];
+            unset($_SESSION['no-category-found']);
+        }
+
+        if (isset($_SESSION['update'])) {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
+
+        if (isset($_SESSION['upload'])) {
+            echo $_SESSION['upload'];
+            unset($_SESSION['upload']);
+        }
+
+        if (isset($_SESSION['failed_remove'])) {
+            echo $_SESSION['failed_remove'];
+            unset($_SESSION['failed_remove']);
+        }
         ?>
         <br /><br />
         <!--Button to Add Category-->
@@ -24,7 +54,7 @@ include "partials/header.php";
             <tr>
                 <th>S.N</th>
                 <th>Title</th>
-                <th>Images</th>
+                <th>Image</th>
                 <th>Featured</th>
                 <th>Active</th>
                 <th>Actions</th>
@@ -68,8 +98,8 @@ include "partials/header.php";
                             <td><?= $featured ?></td>
                             <td><?= $active ?></td>
                             <td>
-                                <a href="#" class="btn-secondary">Update Category</a>
-                                <a href="#" class="btn-danger">Delete Category</a>
+                                <a href="<?= SITEURL; ?>admin/update-category.php?id=<?= $id; ?>" class="btn-secondary">Update Category</a>
+                                <a href="<?= SITEURL; ?>admin/delete-category.php?id=<?= $id; ?>&image_name=<?= $image_name; ?>" class="btn-danger">Delete Category</a>
                             </td>
                         </tr>
                         <?php
