@@ -109,9 +109,7 @@ include "partials/header.php";
                 //We'll display the message inside table
                     ?>
                     <tr>
-                        <td colspan="6">
-                            <div class="error">No Category Added.</div>
-                        </td>
+                            <td colspan="6" class="error">No Category Added.</td>
                     </tr>
                     <?php
                 }
