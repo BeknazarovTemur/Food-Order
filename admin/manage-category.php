@@ -113,7 +113,6 @@ include "partials/header.php";
                     </tr>
                     <?php
                 }
-
             ?>
         </table>
     </div>

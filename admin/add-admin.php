@@ -1,21 +1,5 @@
 <?php
 include 'partials/header.php';
-if (isset($_POST['submit'])) {
-    $full_name = $_POST['full_name'];
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
-    $sql = "INSERT INTO tbl_admin SET full_name = '$full_name', username = '$username', password = '$password'";
-    $res = mysqli_query($conn, $sql) or die(mysqli_error());
-
-    if ($res == true) {
-        $_SESSION['add'] = "<div class='success'> Admin successfully added! </div>";
-        header('location:' .SITEURL. 'admin/manage-admin.php');
-    } else {
-        $_SESSION['add'] = "<div class='error'> Admin did not added! </div>";
-        header('location:' .SITEURL. 'admin/manage-admin.php');
-    }
-}
-
 ?>
 
 <div class="main-content">
@@ -56,6 +40,23 @@ if (isset($_POST['submit'])) {
                 </tr>
             </table>
         </form>
+        <?php
+        if (isset($_POST['submit'])) {
+            $full_name = $_POST['full_name'];
+            $username = $_POST['username'];
+            $password = md5($_POST['password']);
+            $sql = "INSERT INTO tbl_admin SET full_name = '$full_name', username = '$username', password = '$password'";
+            $res = mysqli_query($conn, $sql) or die(mysqli_error());
+
+            if ($res == true) {
+                $_SESSION['add'] = "<div class='success'> Admin successfully added! </div>";
+                header('location:' .SITEURL. 'admin/manage-admin.php');
+            } else {
+                $_SESSION['add'] = "<div class='error'> Admin did not added! </div>";
+                header('location:' .SITEURL. 'admin/manage-admin.php');
+            }
+        }
+        ?>
     </div>
 </div>
 
