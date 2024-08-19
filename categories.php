@@ -16,7 +16,7 @@ include 'partials-front/header.php'
                     $title = $row['title'];
                     $image_name = $row['image_name'];
                     ?>
-                    <a href="<?= SITEURL; ?>category-foods.php">
+                    <a href="<?= SITEURL; ?>category-foods.php?category_id=<?= $id ?>">
                         <div class="box-3 float-container">
                             <?php
                             if ($image_name == "") {
