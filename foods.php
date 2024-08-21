@@ -47,7 +47,7 @@ include 'partials-front/header.php'
                             <p class="food-price">$<?= $price; ?></p>
                             <p class="food-detail"><?= $description ?></p>
                             <br>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="<?= SITEURL ?>order.php?food_id=<?= $id ?>" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                     <?php

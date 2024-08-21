@@ -86,8 +86,16 @@ fieldset{
     border-radius: 5px;
 }
 
+.error{
+    padding: 2%;
+    color: red;
+}
 
-/* CSSS for navbar section */
+.success{
+    padding: 2%;
+    color: green;
+}
+/* CSS for navbar section */
 
 .logo{
     width: 10%;
