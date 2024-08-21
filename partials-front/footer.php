@@ -1,4 +1,4 @@
-<!-- social Section Starts Here -->
+<!-- Social Section Starts Here -->
 <section class="social">
     <div class="container text-center">
         <ul>
@@ -14,15 +14,14 @@
         </ul>
     </div>
 </section>
-<!-- social Section Ends Here -->
+<!-- Social Section Ends Here -->
 
-<!-- footer Section Starts Here -->
+<!-- Footer Section Starts Here -->
 <section class="footer">
     <div class="container text-center">
-        <p>All rights reserved. Designed By <a href="#">Vijay Thapa</a></p>
+        <p>All rights reserved. Designed By <a href="#">Beknazarov Temur</a></p>
     </div>
 </section>
-<!-- footer Section Ends Here -->
-
+<!-- Footer Section Ends Here -->
 </body>
 </html>
